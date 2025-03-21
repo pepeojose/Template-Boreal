@@ -1,0 +1,25 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+i {
+    color: red;
+}
