@@ -1,6 +1,27 @@
+
+
+// -------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const sliderArticles = document.querySelectorAll(".slider__article");
+    const indicatorsContainer = document.querySelector(".slider__indicators");
     let currentSlide = 0;
+
+    // Crear indicadores (círculos)
+    sliderArticles.forEach((_, index) => {
+        const indicator = document.createElement("div");
+        indicator.classList.add("slider__indicator");
+        if (index === 0) indicator.classList.add("active"); // Marcar el primero como activo
+        indicatorsContainer.appendChild(indicator);
+
+        // Añadir evento de clic para navegar a la imagen correspondiente
+        indicator.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            updateIndicators();
+        });
+    });
+
+    const indicators = document.querySelectorAll(".slider__indicator");
 
     // Función para mostrar la diapositiva activa
     const showSlide = (index) => {
@@ -15,12 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Mostrar la primera diapositiva al inicio
-    showSlide(currentSlide);
+    // Actualizar indicadores activos
+    const updateIndicators = () => {
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle("active", i === currentSlide);
+        });
+    };
 
     // Cambiar automáticamente entre diapositivas
     const slideInterval = setInterval(() => {
         currentSlide = (currentSlide + 1) % sliderArticles.length;
         showSlide(currentSlide);
-    }, 8000); // Cambia la diapositiva cada 3 segundos
+        updateIndicators();
+    }, 8000); // Cambia la diapositiva cada 8 segundos
 });
+

@@ -29,7 +29,7 @@ img {
     padding: 2rem;
     background-color: transparent;
     color: #fff;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .logo {
@@ -84,17 +84,55 @@ img {
     color: #fff;
 }
 
-.slider__title {
-    font-size: 2rem;
-    margin-bottom: 4rem;
+.slider__paragraph {
+    position: relative;
+    font-size: 1.3rem;
+    padding-bottom: 2.75rem;
+    letter-spacing: .25rem;
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.slider__paragraph {
-    font-size: 1.3rem;
+.slider__paragraph::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.slider__title {
+    margin: 0;
+    font-size: 4rem;
 }
 
 /* --------------------------- */
 
+.slider__indicators {
+    position: absolute;
+    left: calc(50% - 62.5px);
+    bottom: 2rem;
+    display: flex;
+    margin-top: 10px;
+    z-index: 200;
+}
+
+.slider__indicator {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider__indicator.active {
+    background-color: #fff; /* Color activo */
+}
 
 
 
