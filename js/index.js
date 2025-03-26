@@ -51,3 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 8000); // Cambia la diapositiva cada 8 segundos
 });
 
+window.addEventListener('scroll', () => {
+    const sliderArticles = document.querySelectorAll('.slider__article__image');
+    sliderArticles.forEach((background) => {
+        const scrollOffset = window.scrollY * 0.7; // Velocidad personalizada
+        background.style.transform = `translateY(${scrollOffset}px)`;
+    });
+    
+});
