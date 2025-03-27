@@ -316,8 +316,12 @@ img {
 }
 
 .social__link {
-    display: block;
     margin: 0 1rem;
     font-size: 2rem;
+    color: rgb(128, 128, 128);
+}
+
+.credits {
+    font-size: 1rem;
     color: rgb(128, 128, 128);
 }
