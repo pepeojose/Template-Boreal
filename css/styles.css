@@ -118,7 +118,8 @@ img {
 
 .slider__paragraph::after,
 .card__paragraph::after,
-.wrapper__paragraph::after {
+.wrapper__paragraph::after,
+.galery__paragraph::after {
     content: "";
     position: absolute;
     left: 0;
@@ -271,8 +272,7 @@ img {
     justify-content: center;
     align-items: center;
     height: 20rem;
-    margin-bottom: 6rem;
-    background: url("../assets/img/bg.jpg") no-repeat center center/cover;
+    background: red url("../assets/img/bg.jpg") no-repeat center center/cover;
     background-attachment: fixed;
     color: rgb(191, 191, 191);
     text-align: center;
@@ -297,6 +297,57 @@ img {
     text-align: center;
     color: #fff;
 }
+
+/* -----------------Galery section----------------- */
+
+.galery {
+    padding: 4rem 1.5rem;
+    background-color: rgb(242, 242, 242);
+    color: #a6a6a6;
+    text-align: center;
+}
+
+.galery__paragraph {
+    position: relative;
+    padding-bottom: 2rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+.galery__paragraph::after {
+    background-color: rgb(166, 166, 166);
+}
+
+.galery__title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.galery__image {
+    margin: 2rem auto;
+    border: 15px solid #fff;
+}
+
+/* --------------Media queries Galeria-------------- */
+
+@media screen and (min-width: 1024px) {
+    .galery__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .galery__images { 
+        width: 75%;
+    }
 
 /* ---------------------Footer--------------------- */
 
@@ -324,4 +375,13 @@ img {
 .credits {
     font-size: 1rem;
     color: rgb(128, 128, 128);
+}
+
+/* -----------------Mediaqueries footer----------------- */
+
+@media screen and (min-width: 1024px) {
+    .social__link:hover,
+    .credits:hover {
+        color: #fff;
+    }
 }
