@@ -1,5 +1,3 @@
-
-
 // -------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const sliderArticles = document.querySelectorAll(".slider__article");
@@ -51,11 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 8000); // Cambia la diapositiva cada 8 segundos
 });
 
-window.addEventListener('scroll', () => {
-    const sliderArticles = document.querySelectorAll('.slider__article__image');
+window.addEventListener("scroll", () => {
+    const sliderArticles = document.querySelectorAll(".slider__article__image");
     sliderArticles.forEach((background) => {
         const scrollOffset = window.scrollY * 0.7; // Velocidad personalizada
         background.style.transform = `translateY(${scrollOffset}px)`;
     });
-    
+});
+
+// Menu de navegación
+const menu = document.getElementById("menu");
+const menuClosed = document.getElementById("menuClosed");
+const nav = document.getElementById("nav");
+
+menu.addEventListener("click", () => {
+    nav.classList.add("active");
+});
+
+menuClosed.addEventListener("click", () => {
+    nav.classList.remove("active");
 });

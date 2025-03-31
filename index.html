@@ -10,25 +10,34 @@
         />
         <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/styles.css" />
-        <script src="./js/index.js"></script>
+        <script defer src="./js/index.js"></script>
     </head>
     <body>
         <div class="main-container">
             <header class="header">
                 <div class="logo">
-                    <span class="logo__span">Space</span>
-                    <a href="#menu"
-                        ><i class="fa-solid fa-bars bar-menu"></i>Menu</a
-                    >
+                    <span class="logo__span">Boreal</span>
+                    <span class="logo__menu" id="menu">
+                        <i class="fa-solid fa-bars bar-menu"></i>Menu
+                    </span>
                 </div>
-                <!-- <nav class="nav">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav> -->
             </header>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <span id="menuClosed">
+                        <i class="fa-solid fa-xmark nav__closed"></i>
+                    </span>
+                    <li>
+                        <a class="nav__link" href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="#">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
             <section class="slider">
                 <article class="slider__article slider__article--uno">
                     <div
